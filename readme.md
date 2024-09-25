@@ -17,7 +17,7 @@
 
 ### maio SDKの取得
 
-kotlinの古いバージョンの場合/For older kotlin projects:
+バージョンカタログを使用しない場合/For kotlin projects not using version catalogs:
 
 - maioを導入したいプロジェクトの`build.gradle`に、以下のmavenリポジトリを追加します。
 - Add maio Maven repository to your Project build.gradle:
@@ -47,12 +47,12 @@ kotlinの古いバージョンの場合/For older kotlin projects:
 ### aar
 
 <pre><code>dependencies {
-    implementation 'com.maio:android-sdk-v2:2.0.0'
-    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0@aar'
+    implementation 'com.maio:android-sdk-v2:2.0.0@aar'
+    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
 }
 </pre></code>
 
-kotlinの新しいバージョンの場合/For newer kotlin projects:
+ バージョンカタログを使用する場合/For kotlin projects using version catalogs:
 
 - maioを導入したいプロジェクトの`settings.gradle.kts`に、以下のmavenリポジトリを追加します。
 - Add maio Maven repository to your Project settings.gradle.kts:
@@ -70,8 +70,8 @@ kotlinの新しいバージョンの場合/For newer kotlin projects:
 </pre></code>
 
 
-- maioを導入したいプロジェクトの`settings.gradle.kts`に、以下のmavenリポジトリを追加します。
-- Add maio Maven repository to your Project settings.gradle.kts:
+- maioを導入したいプロジェクトの`libs.versions.toml`に、以下のmavenリポジトリを追加します。
+- Add maio Maven repository to your Project libs.versions.toml:
 
 <pre><code>[versions]
 maioSdk = "2.0.0"
@@ -98,7 +98,11 @@ google_play_services_ads_identifier = { group = "com.google.android.gms", name =
 
 <pre><code>dependencies {
    implementation(libs.google.play.services.ads.identifier)
-    implementation(libs.maio.android.sdk@aar)
+   implementation(libs.maio.android.sdk) {
+    artifact {
+        type = "aar"
+    }
+}
 }
 </pre></code>
 
