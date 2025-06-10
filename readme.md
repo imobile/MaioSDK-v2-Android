@@ -151,7 +151,26 @@ google_play_services_ads_identifier = { group = "com.google.android.gms", name =
     }
 </pre></code>
 
+## maio SDK Manifest Settings
 
+- maioアクティビティをマニフェストに追加します (aarの場合に必要ありません）：
+- Add the maio activity to your manifest (not needed when using aar):
+
+  ```xml 
+        <activity
+            android:name="AdActivity"
+            android:configChanges="orientation|screenLayout|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="PlayableActivity"
+            android:configChanges="orientation|screenLayout|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+     ```
+    
 ## Manual Download
 
 [releases](https://github.com/imobile/MaioSDK-v2-iOS/releases)
