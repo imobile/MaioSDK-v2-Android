@@ -1,8 +1,8 @@
 # maio SDK v2
 
-- SDK Version: 2.0.5
+- SDK Version: 2.0.6
 - 対応 Android Version: 4.4 以降
-- Supported Formats: Rewarded/Interstitial
+- Supported Formats: Rewarded/Interstitial/Banner
 
 ## What is maio?
 
