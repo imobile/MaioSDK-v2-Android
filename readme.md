@@ -1,6 +1,6 @@
 # maio SDK v2
 
-- SDK Version: 2.0.6
+- SDK Version: 2.0.7
 - 対応 Android Version: 4.4 以降
 - Supported Formats: Rewarded/Interstitial/Banner
 
@@ -39,7 +39,7 @@
 ### jar 
 
 <pre><code>dependencies {
-    implementation 'com.maio:android-sdk-v2:2.0.5'
+    implementation 'com.maio:android-sdk-v2:2.0.7'
     implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
 }
 </pre></code>
@@ -47,7 +47,7 @@
 ### aar
 
 <pre><code>dependencies {
-    implementation 'com.maio:android-sdk-v2:2.0.5@aar'
+    implementation 'com.maio:android-sdk-v2:2.0.7@aar'
     implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
 }
 </pre></code>
@@ -74,7 +74,7 @@
 - Add maio Maven repository to your Project libs.versions.toml:
 
 <pre><code>[versions]
-maioSdk = "2.0.5"
+maioSdk = "2.0.7"
 playServicesAdsIdentifier = "17.0.0"
 
 [libraries]
